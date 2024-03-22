@@ -1,19 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stanley's Python Web App</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Indian Shakahari Rasoi</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 1em; /* Add a margin of 1 spacing unit */
+        padding: 0;
+        background-color: white; /* White background color */
+    }
+
+    header {
+        background-color: #fff; /* White background color */
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    header div {
+        text-align: center;
+    }
+
+    header h1 {
+        color: #4CAF50; /* Green font color */
+        font-weight: normal;
+        font-style: italic;
+        display: inline;
+        margin-right: 10px;
+    }
+
+    header img {
+        max-width: 150px; /* Set the image width */
+        vertical-align: middle; /* Align the image vertically with the text */
+    }
+
+    nav {
+        text-align: right;
+        padding: 10px;
+        background-color: #fff; /* White background color */
+    }
+
+    nav a {
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-left: 20px;
+        color: darkred;
+        text-decoration: none;
+    }
+
+    main {
+        padding: 20px; /* Remove the background color */
+    }
+
+    .intro {
+        margin-bottom: 20px;
+    }
+
+    .recipes {
+        text-align: center;
+    }
+
+    .recipes h2 {
+        font-family: 'Playfair Display', serif;
+        font-weight: bold;
+        font-style: italic;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .recipes nav {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .recipes nav button {
+        font-family: 'Playfair Display', serif;
+        font-weight: bold;
+        font-style: italic;
+        margin-right: 10px;
+    }
+
+    .recipes input[type="text"] {
+        padding: 5px;
+        margin-right: 10px;
+    }
+
+    .recipes input[type="button"] {
+        padding: 5px 10px;
+        margin-right: 10px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    .recipes ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .recipes ul li {
+        display: inline-block;
+        margin-right: 20px;
+        width: 200px; /* Set a fixed width for the list items */
+    }
+
+    .recipes img {
+        display: block;
+        margin: 0 auto 10px; /* Center the image and add some bottom margin */
+        max-width: 100%; /* Set the maximum width for the image */
+        height: auto; /* Maintain aspect ratio */
+    }
+</style>
 </head>
 <body>
-    {%extends "templates.html" %}
-    {% block content %}
+    <header>
+        <div>
+            <img src="https://i.pinimg.com/736x/a6/db/ca/a6dbca7640d8916d9456ad2a262b2dd4.jpg" alt="Logo">
+            <h1>Indian Shakahari Rasoi</h1>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="restaurants.html">Restaurants</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+    <main>
+        <div class="intro">
+            <p><strong><em>Namaste and welcome to Indian Vegetarian Rasoi, where the essence of Indian vegetarian cuisine comes alive!</em></strong></p>
+            <p><em>At Indian Vegetarian Rasoi, we believe that vegetarian cooking is not just about omitting meat but about celebrating the abundance of flavorful ingredients that nature offers. Our mission is to inspire you to embrace the vibrant colors, aromatic spices, and wholesome goodness of Indian vegetarian dishes.</em></p>
+            <p><em>From comforting dals to exotic paneer delicacies, our curated collection of recipes reflects the diversity and richness of Indian culinary traditions. Whether you're seeking quick weeknight meals or elaborate festive feasts, we've got you covered with easy-to-follow recipes that are sure to impress.</em></p>
+            <p><em>Join us on a culinary voyage that spans the length and breadth of India, from the lush fields of Punjab to the sun-kissed shores of Kerala. Let's embark on a journey of discovery, where every dish tells a story and every bite transports you to the heart of India's culinary heritage.</em></p>
+            <p><em>So, grab your apron, sharpen your knives, and get ready to embark on a flavorful adventure with us. Let's dive into the world of Indian vegetarian cooking together!!!</em></p>
+        </div>
+        <div class="recipes">
+            <h2>Our Recipes</h2>
+            <nav>
+                <button onclick="sortRecipes('asc')">Sort Ascending</button>
+                <button onclick="sortRecipes('desc')">Sort Descending</button>
+                <input type="text" id="searchInput" placeholder="Search...">
+                <button onclick="searchRecipes()">Search</button>
+            </nav>
+            <ul id="recipeList">
+                <li>
+                    <img src="https://www.vegrecipesofindia.com/wp-content/uploads/2020/01/paneer-butter-masala-5.jpg" alt="Paneer Butter Masala">
+                    <a href="paneer_butter_masala.html">Paneer Butter Masala</a>
+                </li>
+                <li>
+                    <img src="https://myfoodstory.com/wp-content/uploads/2020/09/Veg-Biryani-4.jpg" alt="Veg Dum Biryani">
+                    <a href="veg_dum_biryani.html">Veg Dum Biryani</a>
+                </li>
+                <li>
+                    <img src="https://www.eitanbernath.com/wp-content/uploads/2020/05/Butter-Paneer-1-4x5-LOW-RES-819x1024.jpeg" alt="Jalebi">
+                    <a href="jalebi.html">Jalebi</a>
+                </li>
+            </ul>
+        </div>
+    </main>
 
-    <h2>A Simple Python Web App</h2>
-    <p>Hello Word!!!!!!!, Our Web App is up and running</p>
+    <script>
+        const recipes = [
+            { name: "Paneer Butter Masala", url: "paneer_butter_masala.html", img: "https://static.toiimg.com/thumb/53099699.cms?imgsize=182393&width=800&height=800" },
+            { name: "Jalebi", url: "jalebi.html", img: "https://www.vegrecipesofindia.com/wp-content/uploads/2020/01/paneer-butter-masala-5.jpg" },
+            { name: "Veg Dum Biryani", url: "veg_dum_biryani.html", img: "https://myfoodstory.com/wp-content/uploads/2020/09/Veg-Biryani-4.jpg" }
+        ];
 
-    {% endblock %}
+        function displayRecipes(recipes) {
+            const recipeList = document.getElementById('recipeList');
+            recipeList.innerHTML = '';
+            recipes.forEach(recipe => {
+                const li = document.createElement('li');
+                const img = document.createElement('img');
+                img.src = recipe.img;
+                img.alt = recipe.name;
+                li.appendChild(img);
+                const a = document.createElement('a');
+                a.href = recipe.url;
+                a.textContent = recipe.name;
+                li.appendChild(a);
+                recipeList.appendChild(li);
+            });
+        }
 
+        function sortRecipes(order) {
+            if (order === 'asc') {
+                recipes.sort((a, b) => a.name.localeCompare(b.name));
+            } else if (order === 'desc') {
+                recipes.sort((a, b) => b.name.localeCompare(a.name));
+            }
+            displayRecipes(recipes);
+        }
+
+        function searchRecipes() {
+            const searchInput = document.getElementById('searchInput').value.toLowerCase();
+            const filteredRecipes = recipes.filter(recipe => recipe.name.toLowerCase().includes(searchInput));
+            displayRecipes(filteredRecipes);
+        }
+
+        displayRecipes(recipes);
+    </script>
 </body>
 </html>
