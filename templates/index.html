@@ -123,9 +123,7 @@
             <h1>Indian Shakahari Rasoi</h1>
         </div>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="restaurants.html">Restaurants</a>
-            <a href="contact.html">Contact Us</a>
+            <a href="{{ url_for('index') }}">Home</a>
         </nav>
     </header>
     <main>
@@ -147,15 +145,15 @@
             <ul id="recipeList">
                 <li>
                     <img src="https://www.vegrecipesofindia.com/wp-content/uploads/2020/01/paneer-butter-masala-5.jpg" alt="Paneer Butter Masala">
-                    <a href="{{ url_for('paneer_butter_masala.html') }}">Paneer Butter Masala</a>
+                    <a href="{{ url_for('paneer_butter_masala') }}">Paneer Butter Masala</a>
                 </li>
                 <li>
                     <img src="https://myfoodstory.com/wp-content/uploads/2020/09/Veg-Biryani-4.jpg" alt="Veg Dum Biryani">
-                    <a href="veg_dum_biryani.html">Veg Dum Biryani</a>
+                    <a href="{{ url_for('veg_dum_biryani')}}">Veg Dum Biryani</a>
                 </li>
                 <li>
                     <img src="https://www.eitanbernath.com/wp-content/uploads/2020/05/Butter-Paneer-1-4x5-LOW-RES-819x1024.jpeg" alt="Jalebi">
-                    <a href="jalebi.html">Jalebi</a>
+                    <a href="{{ url_for('jalebi')}}">Jalebi</a>
                 </li>
             </ul>
         </div>
