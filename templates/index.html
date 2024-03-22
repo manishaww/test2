@@ -161,8 +161,8 @@
 
     <script>
         const recipes = [
-            { name: "Paneer Butter Masala", url: "paneer_butter_masala.html", img: "https://www.vegrecipesofindia.com/wp-content/uploads/2020/01/paneer-butter-masala-5.jpg" },
-            { name: "Jalebi", url: "jalebi.html", img: "https://static.toiimg.com/thumb/53099699.cms?imgsize=182393&width=800&height=800" },
+            { name: "Paneer Butter Masala", url: "{{ url_for('paneer_butter_masala') }}", img: "https://www.vegrecipesofindia.com/wp-content/uploads/2020/01/paneer-butter-masala-5.jpg" },
+            { name: "Jalebi", url: "{{ url_for('jalebi')}}", img: "https://static.toiimg.com/thumb/53099699.cms?imgsize=182393&width=800&height=800" },
             { name: "Veg Dum Biryani", url: "veg_dum_biryani.html", img: "https://myfoodstory.com/wp-content/uploads/2020/09/Veg-Biryani-4.jpg" }
         ];
 
